@@ -1,6 +1,6 @@
 library(data.table)
 
-data <- as.data.table(read.table(unz("exdata_data_household_power_consumption.zip", "household_power_consumption.txt"), header=T, sep=";", dec=".", na="?"))
+data <- as.data.table(read.table(unz("exdata_data_household_power_consumption.zip", "household_power_consumption.txt"), header=T, sep=";", dec=".", na.strings = "?"))
 
 data <- data[Date == "1/2/2007" | Date == "2/2/2007"]
 
